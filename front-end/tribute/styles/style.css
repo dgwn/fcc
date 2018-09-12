@@ -11,9 +11,34 @@ html, body{
   border-radius: 5px;
   background: #eee;
 }
-#img{
+img{
   max-width: 100%;
   display: block;
   height: auto;
   margin: auto;
+}
+#img-div{
+  margin: -5px;
+  margin-top: 20px;
+  width: 100%;
+  border: 5px solid white;
+  background: white;
+}
+#img-caption{
+  margin: 15px;
+}
+#headline{
+  margin-top:50px;
+  text-align: left;
+}
+ul{
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: left;
+}
+li{
+  margin: 20px;
+}
+#learnmore{
+  font-style: italic;
 }
