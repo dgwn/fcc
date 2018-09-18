@@ -19,8 +19,8 @@
         <input type="text" id="email" placeholder="Enter your email" required>
       </div>
       <div class="input-field">
-        <label id="age-label" for="age">* Age</label>
-        <input type="number" id="age" placeholder="Age" required>
+        <label id="number-label" for="age">* Age</label>
+        <input type="number" id="age" placeholder="Age" min="1" max="125" required>
       </div>
       <div class="input-radio">
         <label id="party-label" for="party">What political party are you registered with?</label>
@@ -76,7 +76,7 @@
           <option value="titusville">Titusville</option>
           <option value="other">--Other--</option>
         </select>
-        <button type="sumbit">Submit</button>
+        <button type="sumbit" id="submit">Submit</button>
       </div>
     </form>
   </div>
