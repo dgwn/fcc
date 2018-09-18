@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="styles/style.css" type="text/css"
+  <link rel="stylesheet" href="styles/style.css" type="text/css">
   <title>Survey Form</title>
 </head>
 
 <body>
+  <h1 id="title">Survey Form</h1>
   <div class="contatiner" id="main">
-    <h1 id="title">survey title</h1>
-    <p id="description">short explanation</p>
-    <div class="field">
-      <p>* Name</p>
-      <input type="text" id="name" placeholder="Enter your name">
-    </div>
-    <div class="field">
-      <p>* Email</p>
-      <input type="text" id="email" placeholder="Enter your email">
-    </div>
-    <div class="field">
-      <p>* Age</p>
-      <input type="number" id="age" placeholder="Age">
-    </div>
-    <button type="sumbit">Submit</button>
+    <p id="description">Demographics Study</p>
+    <form=id"survey-form" action="https://crossorigin.me/https://freecodecamp.com">
+      <div class="input-field">
+        <label id="name-label" for="name">* Name</label>
+        <input autofocus type="text" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="input-field">
+        <label id="email-label" for="email">* Email</label>
+        <input type="text" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-field">
+        <label id="age-label" for="age">* Age</label>
+        <input type="number" id="age" placeholder="Age" required>
+      </div>
+      <div class="input-field">
+        <label id="party-label" for="party">What political party are you registered with?</label>
+        <ul style="list-style: none;">
+          <li class="radio"><label>Republican <input name="radio-buttons" value="1" type="radio" class="party"</label></li>
+          <li class="radio"><label>Democrat <input name="radio-buttons" value="2" type="radio" class="party"</label></li>
+          <li class="radio"><label>Other/No Party Affiliation <input name="radio-buttons" value="2" type="radio" class="party"</label></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <label id="region-label" for="region">What is your nearest metropolitan area?</label>
+        <select id="dropdown">
+          <option disabled value>Select an option</option>
+          <option value="daytona-beach">Daytona Beach</option>
+          <option value="gainesville">Gainesville</option>
+          <option value="jacksonville">Jacksonville</option>
+          <option value="orlando">Orlando</option>
+          <option value="pensacola">Pensacola</option>
+          <option value="miami">Miami</option>
+          <option value="tallahassee">Tallahassee</option>
+          <option value="titusville">Titusville</option>
+          <option value="other">--Other--</option>
+        </select>
+        <button type="sumbit">Submit</button>
+      </div>
+    </form>
   </div>
+
 </body>
 
 </html>
