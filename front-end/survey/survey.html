@@ -32,73 +32,100 @@
       </div>
 
       <div class="rowTab">
-        <div class="labels"
+        <div class="labels">
           <label id="number-label" for="age">* Age</label>
         </div>
         <div class="rightTab">
           <input type="number" id="number" class="input-field" placeholder="Age" min="1" max="125" required>
         </div>
       </div>
-      
-      <div class="input-radio">
-        <label id="party-label" for="party">What political party are you registered with?</label>
-        <ul style="list-style: none;">
-          <li class="radio"><label>Republican <input name="radio-buttons" value="1" type="radio" class="party"></label></li>
-          <li class="radio"><label>Democratic <input name="radio-buttons" value="2" type="radio" class="party"></label></li>
-          <li class="radio"><label>Other/No Party Affiliation <input name="radio-buttons" value="2" type="radio" class="party"</label></li>
-        </ul>
+
+      <div class="rowTab">
+        <div class="labels">
+          <label id="party-label" for="party">What political party are you registered with?</label>
+        </div>
+        <div class="rightTab">
+          <ul style="list-style: none;">
+            <li class="radio"><label>Republican <input name="radio-buttons" value="1" type="radio" class="party"></label></li>
+            <li class="radio"><label>Democratic <input name="radio-buttons" value="2" type="radio" class="party"></label></li>
+            <li class="radio"><label>Other/No Party Affiliation <input name="radio-buttons" value="2" type="radio" class="party"</label></li>
+          </ul>
+        </div>
       </div>
-      <div class="input-radio">
-        <label id="candidate-label" for="candidate">Who do you plan to vote for in the 2018 Gubernatorial Election?</label>
-        <ul style="list-style: none;">
-          <li class="radio"><label>Andrew Gillum <input name="radio-buttons" value="1" type="radio" class="candidate"></label></li>
-          <li class="radio"><label>Ron DeSantis <input name="radio-buttons" value="2" type="radio" class="candidate"></label></li>
-        </ul>
+
+      <div class="rowTab">
+        <div class="labels">
+          <label id="candidate-label" for="candidate">Who do you plan to vote for in the 2018 Gubernatorial Election?</label>
+        </div>
+        <div class="rightTab">
+          <ul style="list-style: none;">
+            <li class="radio"><label>Andrew Gillum <input name="radio-buttons" value="1" type="radio" class="candidate"></label></li>
+            <li class="radio"><label>Ron DeSantis <input name="radio-buttons" value="2" type="radio" class="candidate"></label></li>
+          </ul>
+        </div>
       </div>
-      <div class="checkbox">
-        <label id="issues-label" for="issues">What issues are most important to you? [Check all that apply]</label>
-        <ul style="list-style: none;">
-          <li class="checkbox">
-            <label><input name="issue-button" value="1" type="checkbox">Environment</label>
-          </li>
-          <li class="checkbox">
-            <label><input name="issue-button" value="2" type="checkbox">Gun Control</label>
-          </li>
-          <li class="checkbox">
-            <label><input name="issue-button" value="3" type="checkbox">Family Planning</label>
-          </li>
-          <li class="checkbox">
-            <label><input name="issue-button" value="4" type="checkbox">Minimum Wage</label>
-          </li>
-          <li class="checkbox">
-            <label><input name="issue-button" value="5" type="checkbox">Immigration</label>
-          </li>
-          <li class="checkbox">
-            <label><input name="issue-button" value="6" type="checkbox">Taxes</label>
-          </li>
-          <li class="checkbox">
-            <label><input name="issue-button" value="7" type="checkbox">Healthcare</label>
-          </li>
+
+      <div class="rowTab">
+        <div class="labels">
+          <label id="issues-label" for="issues">What issues are most important to you? [Check all that apply]</label>
+        </div>
+        <div class="rightTab">
+          <ul style="list-style: none;">
+            <li class="checkbox">
+              <label><input name="issue-button" value="1" type="checkbox">Environment</label>
+            </li>
+            <li class="checkbox">
+              <label><input name="issue-button" value="2" type="checkbox">Gun Control</label>
+            </li>
+            <li class="checkbox">
+              <label><input name="issue-button"   value="3" type="checkbox">Family Planning</label>
+            </li>
+            <li class="checkbox">
+              <label><input name="issue-button" value="4" type="checkbox">Minimum Wage</label>
+            </li>
+            <li class="checkbox">
+              <label><input name="issue-button" value="5" type="checkbox">Immigration</label>
+            </li>
+            <li class="checkbox">
+              <label><input name="issue-button" value="6" type="checkbox">Taxes</label>
+            </li>
+            <li class="checkbox">
+              <label><input name="issue-button" value="7" type="checkbox">Healthcare</label>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="textbox">
-        <label for="comments">Other issues that are important to you:</label>
-        <textarea id="comments" class="input-field" style="height: 50px; resize: vertical;" name="comment" placeholder="Enter issues here (separated by commas)"></textarea>
+
+      <div class="rowTab">
+        <div class="labels">
+          <label for="comments">Other issues that are important to you:</label>
+        </div>
+        <div class="rightTab">
+          <textarea id="comments" class="input-field" style="height: 50px; resize: vertical;" name="comment" placeholder="Enter issues here (separated by commas)"></textarea>
+        </div>
       </div>
-      <div class="dropdown">
-        <label id="region-label" for="region">What is your nearest metropolitan area?</label>
-        <select id="dropdown">
-          <option disabled value>Select an option</option>
-          <option value="daytona-beach">Daytona Beach</option>
-          <option value="gainesville">Gainesville</option>
-          <option value="jacksonville">Jacksonville</option>
-          <option value="orlando">Orlando</option>
-          <option value="pensacola">Pensacola</option>
-          <option value="miami">Miami</option>
-          <option value="tallahassee">Tallahassee</option>
-          <option value="titusville">Titusville</option>
-          <option value="other">--Other--</option>
-        </select>
-        <button type="sumbit" id="submit">Submit</button>
+
+      <div class="rowTab">
+        <div class="labels">
+          <label id="region-label" for="region">What is your nearest metropolitan area?</label>
+        </div>
+        <div class="rightTab">
+          <select id="dropdown">
+            <option disabled value>Select an option</option>
+            <option value="daytona-beach">Daytona Beach</option>
+            <option value="gainesville">Gainesville</option>
+            <option value="jacksonville">Jacksonville</option>
+            <option value="orlando">Orlando</option>
+            <option value="pensacola">Pensacola</option>
+            <option value="miami">Miami</option>
+            <option value="tallahassee">Tallahassee</option>
+            <option value="titusville">Titusville</option>
+            <option value="other">--Other--</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="sumbit" id="submit">Submit</button>
       </div>
 
     </form>
