@@ -1,0 +1,155 @@
+html{
+  font-family: 'Roboto', Arial, sans-serif;
+  text-align: center;
+}
+
+#navbar{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #303030;
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px;
+  font-family: 'Futura', Arial, sans-serif;
+}
+
+#navbar ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.nav-link {
+  text-decoration: none;
+  display: flex;
+  color: white;
+  list-style: none;
+  font-size: 1.5em;
+}
+
+.nav-link:hover {
+  color: #FEA254;
+}
+
+main, body{
+  width: 100%;
+  left: 0;
+  margin: 0;
+  padding: auto;
+  background-color: #988C6F;
+}
+
+.intro{
+  min-height: 55vh;
+  padding-top: 45vh;
+}
+
+#welcome-section{
+  width: 100%;
+  background-color: #D1FEF9;
+  display: block;
+  color: #303030;
+}
+
+#welcome-section h1{
+  /*padding-top: 175px;*/
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #779E8F;
+  font-size: 64px;
+}
+
+#welcome-section p{
+  font-size: 15px;
+  text-align: center;
+  margin-top:-25px;
+  font-size: 18px;
+}
+
+#work-header{
+  color: white;
+  margin-top: 100px;
+  font-size: 36px;
+}
+
+.project{
+  display: inline-block;
+  text-decoration: none;
+  overflow: hidden;
+  background-color: white;
+  border: 2px solid #303030;
+  height: 230px;
+  width: 280px;
+  margin: 40px 100px;
+}
+
+.project-pic{
+  margin: 10px;
+  max-height: 180px;
+  width: auto;
+}
+
+.project-title{
+  border-top: 2px solid #303030;
+  background-color: #D1FEF9;
+  height: 100%;
+  color: #303030;
+}
+
+.project-title:hover {
+  background-color: #779E8F;
+}
+
+@media only screen and (max-width: 800px) {
+  #welcome-section h1{
+    font-size: 35px;
+    padding-bottom: 20px;
+  }
+  .project {
+    margin: 20px 0;
+  }
+}
+
+.contact{
+  background-color: #FEA254;
+  padding-bottom: 100px;
+}
+
+#contact-header{
+  color: white;
+  padding-top: 100px;
+  font-size: 48px;
+}
+
+.contact-button{
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 35px 45px 35px;
+  border: 2px solid #303030;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background-color: #D1FEF9;
+  text-decoration: none;
+  color: #303030;
+}
+
+.contact-button:hover {
+  background-color: #779E8F;
+}
+
+footer{
+  padding: 20px;
+  background: #303030;
+  color: white;
+}
+
+footer a {
+    color: white;
+}
