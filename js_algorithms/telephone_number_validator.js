@@ -8,8 +8,8 @@ function telephoneCheck(str) {
       if (!isNaN(split[i])) {
         numOfNum++;
       }
-     }
-     console.log(numOfNum)
+    }
+     return numOfNum;
   }
 
   // check if there are either 10 or 11 numbers in the test
@@ -22,7 +22,7 @@ function telephoneCheck(str) {
     // checkFormat()
 
 
-  howManyNumbers()
+  howManyNumbers();
 }
 
 telephoneCheck("555-555-5555");
