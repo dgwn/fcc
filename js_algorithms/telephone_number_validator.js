@@ -5,7 +5,7 @@ function telephoneCheck(str) {
     let split = str.split('');
     let numOfNum = 0;
     for (let i = 0; i < split.length; i++) {
-      if (!isNaN(split[i])) {
+      if (!isNaN(parseInt(split[i]))) {
         numOfNum++;
       }
     }
@@ -13,6 +13,13 @@ function telephoneCheck(str) {
   }
 
   // check if there are either 10 or 11 numbers in the test
+  if (howManyNumbers() === 10) {
+    return true;
+  }
+  else if (howManyNumbers() === 11 && parseInt(str.split('')[0], 10) === 1) {
+    return true;
+  }
+  else return false;
 
     // if no, false
     // if yes and there are 11 numbers, check if first number is 1
