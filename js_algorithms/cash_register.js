@@ -9,6 +9,19 @@ function checkCashRegister(price, cash, cid) {
     console.log(cid[i])
   };
 
+  // return the desired data
+  if (change > totalCash) {
+    console.log("insufficient");
+    return {status: "INSUFFICIENT_FUNDS", change: [changeGiven]};
+  }
+  else if (change === totalCash) {
+    console.log("closed");
+    return {status: "CLOSED", change: [changeGiven]};
+  }
+  else if (change < totalCash) {
+    console.log("open");
+    return {status: "OPEN", change: [changeGiven]};
+  }
 
   function assignValue(item) {
     if (item === "PENNY") {
