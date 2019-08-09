@@ -46,15 +46,23 @@ function getRegisterStatus(changeNeeded, totalCash) {
   else return REGISTER_STATUS.closed;
 }
 
-function getChange() {
+function getChange(changeNeeded, cid) {
   let change = [];
-  for (let i = 8; i >= 0; i--) {
+  for (let i = cid.length - 1; i <= 0; i--) {
+    let currencyName = cid[i][0];
+    let currencyTotal = cid[0][1];
+    let currencyValue = CURRENCY_DICTIONARY[currencyName];
+    let startCurrencyItems = currencyTotal / currencyValue;
+    let returnedCurrencyItems = 0;
+
     if (changeNeeded > cid[i][2]) {
       console.log(cid[i]);
 
     }
     else console.log("0 " + cid[i][0])
-  };
+  }
+
+  return change;
 };
 
 
