@@ -1,59 +1,62 @@
+const CURRENCY_DICTIONARY = {
+  "PENNY": 0.01,
+  "NICKEL": 0.05,
+  "DIME": 0.10,
+  "QUARTER": 0.25,
+  "ONE": 1.00,
+  "FIVE": 5.00,
+  "TEN": 10.00,
+  "TWENTY": 20.00,
+  "ONE HUNDRED": 100.00
+};
+
+const REGISTER_STATUS = { closed: 'CLOSED', open: 'OPEN', insufficientFunds: 'INSUFFICIENT_FUNDS'};
+
 function checkCashRegister(price, cash, cid) {
-  let change = cash - price;
-  let totalCash = 0;
+  let cashRegister = { status: '', change: cid };
+  let changeNeeded = cash - price;
+  let totalCash = getTotalinDrawer(cid);
+  cashRegister.status = getRegisterStatus(changeNeeded, totalCash);
+
   // cid format is ["NAME", total amount of this item, value of this item, number of items]
-  for (let i = 0; i < cid.length; i++) {
-    totalCash += cid[i][1];
-    cid[i][2] = assignValue(cid[i][0]);
-    cid[i][3] = cid[i][1] / cid[i][2];
-    console.log(cid[i])
-  };
 
-  // return the desired data
-  if (change > totalCash) {
-    console.log("insufficient");
-    return {status: "INSUFFICIENT_FUNDS", change: [changeGiven]};
-  }
-  else if (change === totalCash) {
-    console.log("closed");
-    return {status: "CLOSED", change: [changeGiven]};
-  }
-  else if (change < totalCash) {
-    console.log("open");
-    return {status: "OPEN", change: [changeGiven]};
-  }
-
-  function assignValue(item) {
-    if (item === "PENNY") {
-      return 0.01;
-    }
-    else if (item === "NICKEL") {
-      return 0.05;
-    }
-    else if (item === "DIME") {
-      return 0.10;
-    }
-    else if (item === "QUARTER") {
-      return 0.25;
-    }
-    else if (item === "ONE") {
-      return 1;
-    }
-    else if (item === "FIVE") {
-      return 5;
-    }
-    else if (item === "TEN") {
-      return 10;
-    }
-    else if (item === "TWENTY") {
-      return 20;
-    }
-    else if (item === "ONE HUNDERED") {
-      return 100;
-    }
-  };
+  /*
+  cid[i][2] = assignValue(cid[i][0]);
+  cid[i][3] = cid[i][1] / cid[i][2];
+  console.log(cid[i])
+  */
 
 }
+
+function getTotalinDrawer(cid) {
+  for (let i = 0; i < cid.length; i++) {
+    let total = 0
+    total += cid[i][1];
+    return total;
+  };
+}
+
+function getRegisterStatus(changeNeeded, totalCash) {
+  if (changeNeeded > totalCash) {
+    return REGISTER_STATUS.insufficientFunds;
+  }
+  else if (changeNeeded < totalCash) {
+    return REGISTER_STATUS.open;
+  }
+  else return REGISTER_STATUS.closed;
+}
+
+function getChange() {
+  let change = [];
+  for (let i = 8; i >= 0; i--) {
+    if (changeNeeded > cid[i][2]) {
+      console.log(cid[i]);
+
+    }
+    else console.log("0 " + cid[i][0])
+  };
+};
+
 
 // Example cash-in-drawer array:
 // [["PENNY", 1.01],
